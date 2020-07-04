@@ -2,8 +2,8 @@ class Solution {
 public:
     vector<int> prisonAfterNDays(vector<int>& cells, int N)
     {
-        vector<int> ans(8,0);
-        if(N%14==0)
+        vector<int> ans(8,0);//ans vectcor to store answer
+        if(N%14==0)//After every 14 days this cycle will get repeated
         N=14;
         else
         N=N%14;
@@ -17,7 +17,7 @@ public:
             }
             
             for (int idx = 0; idx < cells.size(); ++idx) {
-                cells[idx] = ans[idx];
+                cells[idx] = ans[idx];//changing cells state to current state
             }
         }
         
